@@ -28,13 +28,10 @@ jobs:
       - name: Skyline DataMiner Deploy Action
         # You may pin to the exact commit or the version.
         # uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@a1b280087cc1929842b7b1f1f7a40831f9942ec2
-  uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@v1.0.11 
+        uses: SkylineCommunications/Skyline-DataMiner-Deploy-Action@v1.0.11
         with:
          api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }} 
          solution-path: AutomationScript.sln 
          artifact-name: EmpowerHelloWorld 
          version: 1.0.1 
-         timeout: # optional, default is 900 
-         stage: # optional, default is All 
-         artifact-id: 
          build-number: ${{ github.run_number }}
